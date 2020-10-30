@@ -17,7 +17,7 @@ class Binance:
         df['Open time'] = pd.to_datetime(df['Open timestamp'],unit='ms')
         df['Close time'] = pd.to_datetime(df['Close timestamp'],unit='ms')
         df = df[['Open time', 'Open','High','Low','Close','Volume','Close time']]
-        df.to_csv('./candledata.csv', index=False)
+        df.to_csv('./candle_data.csv', index=False)
 
 
     def get_recent_transactions(self, limit=50):
